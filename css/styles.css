@@ -1,43 +1,74 @@
-section.h1{
-    color: #0f0e0e;
-    font-size: 20px;
-    width: 75%;
-}
-
-nav{
-    background-color: #d7d1c9;
-    padding: 25px;
-    margin: .5px ;
-    text-align: left;
-    box-shadow: 1px 0 4px rgb(0,0,0,.2);
-
-}
-
-nav a{
-    font-size: 20px;
-    text-align: center;
-    background-color: #672f2f;
-    border-radius:10px 0 10px 0;
-    color:#d7d1c9;
-    margin: 10px;
-    padding: 10px;
-    text-decoration: none;
-    display: inline;
-
-}
-
-section{
-    background-color: #d7d1c9 ;
-    color: #0F0E0E;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    padding: 15px;
-    box-shadow: 1px 0 4px rgb(0,0,0,.2);
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap');
 
 body{
-    background-color:#FAF5EF ;
+    font-family: Prompt;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color:#d7d1c9;
 }
 
 
+nav a{
+    font-size: 25px;
+    letter-spacing: 2px;
+    background-color: #672F2F;
+    margin: 15px;
+    padding: 20px;
+    text-decoration: none;
+    transition: all 1s;
+    border-radius:10px 0 10px 0;
+   
+}
+
+nav a:hover{
+    background-color: var(--accent-color);
+    color: var(--primary-color-dark);
+}
+
+/*cabecero*/
+header{
+    display:flex;
+    justify-content: space-between;
+    background-color: #d7d1c9;
+    align-items: center;
+    padding:20px 0px 20px 0px;
+    box-shadow: 1px 0 4px rgb(0,0,0,.2);
+    text-align: center;
+    border-radius:10px 0 10px 0;
+}
+
+
+.logo{
+    display:flex;
+    align-items: center;
+    background-color: #d7d1c9;
+}
+
+.logo img{
+    padding: 0;
+    margin-right: 10px;
+
+}
+
+/*Para todos los section de clase content*/
+.content{
+    box-shadow: 1px 0 4px rgb(0,0,0,.2);
+    background-color: #d7d1c9;
+    border-radius:10px 0 10px 0;
+    display:flex;
+    
+}
+
+.half-section {
+    width: 50%;
+  }
+
+
+:root{
+    --acent-color: #d7d1c9;
+    --primary-color-dark:#0e0e0e;
+    --primary-color:#672F2F;
+}

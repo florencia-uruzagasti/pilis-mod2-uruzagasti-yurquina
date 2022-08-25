@@ -1,49 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expo Vinicola</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feria del Vino-Jujuy</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
     <header>
-        <!-- Logo (link al home) -->
-
-        <nav>
-            <!-- Nosotros - El evento - Registrate -->
-            <a href="#nosotros">Nosotros</a>
-            <a href="#evento">Expo Vinicola</a>
-            <a href="#resgistro">Registrate</a>
-        </nav>
+      <!-- Logo (link al home) -->
+      <nav>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#evento">Sobre el Evento</a>
+        <a href="#registro">Registrate</a>
+        <!-- Nosotros - El evento - Registrate -->
+      </nav>
+      <a class="logo" href="#home">
+        <img
+            class="logo"
+            id="main-logo"
+            src="/assets/logo/Feria del vino.svg"
+            alt="Feria del Vino 9° edicion"
+            title="Feria del Vino 9° edicion"
+            width="220"
+            height="220"
+        />
+      </a>
     </header>
-    <br>
-    <section>
-        <!-- Home -->
-        <h1>Feria del Vino 9° Edición - Jujuy</h1>
+    <br />
+
+    <section id="home" class="content">
+      <!-- Home -->
+      <aside class="half-section tittle-section">
+        <h2>Feria del Vino 9° Edición - Jujuy</h2>
         <p>Juntos potenciamos el comercio jujeño</p>
+      </aside>
+      <aside class="half-section img-section">
+        <img
+          src="https://somosjujuy-wordpress.s3.amazonaws.com/wp-content/uploads/2019/10/feria-del-vino.jpg"
+          alt="Feria del Vino"
+          width="750"
+          height="400"
+        />
+      </aside>
+    </section>
+    <br>
+
+    <section id="evento" class="content">
+      <!-- video y en la izq un subtitulo con un parrafo ..TODO sobre el evento -->
+      <aside class="half-section tittle-section">
+        <iframe
+          width="702"
+          height="395"
+          src="https://www.youtube.com/embed/rCqHApxgpsU"
+          title="Feria del Vino Jujuy"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </aside>
+      <aside class="half-section text-section">
+        <p>
+          Acompañados de las mejores bodegas del país, Vinería San Juan lleva
+          organizadas siete ediciones que hoy forman parte de la agenda de
+          actividades jujeñas. La primera edición nace de la mano del Club del
+          Vino y fue lanzada para la celebración de los 30 años de la vinería.
+          Desde la primera feria hasta la séptima ha sido un especio de
+          confraternización, donde el público disfrutaba de un evento de primer
+          nivel que mixaba la degustación con gastronomía, buena música con la
+          compañía de amigos.
+        </p>
+        <p>
+          A pesar de no haberse realizado el año pasado por motivos de la
+          pandemia, este tradicional evento es muy codiciado por aquellas
+          personas que disfrutan de la degustación de vinos y espumantes y
+          buscan conocer nuevos sabores, bodegas y tendencias. Con los
+          protocolos correspondientes se espera realizar una nueva edición para
+          el mes de noviembre del presente año.
+        </p>
+        <i>Fuente: El Tribuno de Jujuy </i>
+      </aside>
     </section>
 
-    <section>
-        <!-- video y en la izq un subtitulo con un parrafo ..TODO sobre el evento -->
-        <iframe width="702" height="395" src="https://www.youtube.com/embed/rCqHApxgpsU" title="Feria del Vino Jujuy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>     
+    <section id="registro" class="content">
+      <!-- Sobre los organizadores, derecha imagen de los organizadores -->
+      <aside class="half-section text-section">
+        <p>
+          Organiza: Antonio Ferreyra, organizador de la Feria.
+          <br />
+          Gobierno Provincial de Jujuy, Ministerio de Desarrollo Economico y
+          Productivo.
+        </p>
+      </aside>
+      <aside class="half-section tittle-section">
+        <div class="about-img-container">
+          <ul class="about-img-list">
+            <li>
+              <img
+                src="https://us.cdn.eltribuno.com/072021/1627608795382.jpg?&cw=960"
+                alt="Organizadores Icon" width="650"
+                height="400"
+              />
+            </li>
+            <li>
+                <img
+                  src="https://prensa.jujuy.gob.ar/assets/img/301/logo-301-b.png"
+                  alt="Gob Icon" width="300" height="auto"
+                />
+              </li>
+          </ul>
+        </div>
+      </aside>
+     
     </section>
 
-    <section>
-        <!-- Sobre los organizadores, derecha imagen de los organizadores -->
+    <section class="content">
+      <!-- Resgitro de emprendedores vinicolas: COMERCIO | TITULAR | CELULAR -- ENVIAR -->
+      <p>Formulario...</p>
     </section>
-
-    <section>
-        <!-- Resgitro de emprendedores vinicolas: COMERCIO | TITULAR | CELULAR -- ENVIAR -->
-    </section>
-
 
     <footer>
-
-        <!-- Clima del lugar del evento -->
+      <!-- Clima del lugar del evento -->
+      <p>Clima en el lugar del evento</p>
     </footer>
-
-    
-</body>
+  </body>
 </html>
