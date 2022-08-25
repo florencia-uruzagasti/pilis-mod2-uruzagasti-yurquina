@@ -66,6 +66,16 @@ header{
     width: 50%;
   }
 
+.text-section, h2, p{
+    text-align: center;
+    text-size-adjust: 15px;
+}
+
+ul{
+    list-style: none;
+    align-items: center;
+}
+
 
 :root{
     --acent-color: #d7d1c9;
