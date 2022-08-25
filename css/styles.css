@@ -3,6 +3,11 @@
 body{
     font-family: Prompt;
     margin: 0;
+    overflow-x: hidden;
+}
+
+.content h2{
+    font-size:45px;
 }
 
 a{
@@ -12,7 +17,7 @@ a{
 
 
 nav a{
-    font-size: 25px;
+    font-size: 20px;
     letter-spacing: 2px;
     background-color: #672F2F;
     margin: 15px;
@@ -38,19 +43,18 @@ header{
     box-shadow: 1px 0 4px rgb(0,0,0,.2);
     text-align: center;
     border-radius:10px 0 10px 0;
+    height: 70px;
 }
 
 
 .logo{
     display:flex;
     align-items: center;
-    background-color: #d7d1c9;
 }
 
 .logo img{
     padding: 0;
     margin-right: 10px;
-
 }
 
 /*Para todos los section de clase content*/
@@ -81,4 +85,42 @@ ul{
     --acent-color: #d7d1c9;
     --primary-color-dark:#0e0e0e;
     --primary-color:#672F2F;
+}
+
+/*flotante whatsapp*/
+
+.joinchat__button {
+    position: absolute;
+    z-index: 2;
+    bottom: 8px;
+    right: 8px;
+    height: var(--s);
+    min-width: var(--s);
+    max-width: 95vw;
+    background: #25d366;
+    color: inherit;
+    border-radius: calc(var(--s)/2);
+    box-shadow: 1px 6px 24px 0 rgb(7 94 84 / 24%);
+    cursor: pointer;
+    transition: background-color .2s linear;
+}
+
+.joinchat {
+    --bottom: 20px;
+    --sep: 20px;
+    --s: 60px;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    right: var(--sep);
+    bottom: var(--bottom);
+}
+
+.joinchat *, .joinchat :after, .joinchat :before {
+    box-sizing: border-box;
+}
+
+.joinchat--show {
+    display: block;
+    transform: scaleX(1);
 }
