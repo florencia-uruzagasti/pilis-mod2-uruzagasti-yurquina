@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feria del Vino-Jujuy</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Para la librería Y usar el Swal.fire Ver más en: https://sweetalert2.github.io/ -->
   </head>
   <body>
     <header>
@@ -121,7 +122,22 @@
 
     <section class="content" id="registro">
       <!-- Resgitro de emprendedores vinicolas: COMERCIO | TITULAR | CELULAR -- ENVIAR -->
-      <p>Formulario...</p>
+      <form id="formulario"> 
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input id="name" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" class="form-control" type="email">
+        </div>
+        <div class="form-group">
+          <label for="name">Mensaje</label>
+          <textarea class="form-control" id="message" cols="30" rows="10"></textarea>
+        </div>
+        <!-- CONTROLAR -->
+        <button id="enviar" class="btn btn-light">Enviar</button>
+      </form>
     </section>
     <br />
 <!-- Flotante whatsapp -->
@@ -142,5 +158,6 @@
       <p>Clima en el lugar del evento</p>
     </footer>
     <br />
+    <script src="main.js"></script>
   </body>
 </html>
