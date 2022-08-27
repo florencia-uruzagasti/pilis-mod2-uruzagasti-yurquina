@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap');
+*{
+    margin:0;
+    padding: 0;
+}
+
 
 body{
     font-family: Prompt;
     margin: 0;
     overflow-x: hidden;
+    background-color: #414141;
 }
 
 .content h2{
@@ -12,20 +18,18 @@ body{
 
 a{
     text-decoration: none;
-    color:#d7d1c9;
+    color:#EEEE;  
 }
 
-
 nav a{
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 2px;
     background-color: #672F2F;
-    margin: 15px;
-    padding: 20px;
+    margin: 25px;
+    padding:10px;
     text-decoration: none;
     transition: all 1s;
     border-radius:10px 0 10px 0;
-   
 }
 
 nav a:hover{
@@ -33,11 +37,13 @@ nav a:hover{
     color: var(--primary-color-dark);
 }
 
+
+
 /*cabecero*/
 header{
     display:flex;
     justify-content: space-between;
-    background-color: #d7d1c9;
+    /*background-color: #252525;*/
     align-items: center;
     padding:20px 0px 20px 0px;
     box-shadow: 1px 0 4px rgb(0,0,0,.2);
@@ -55,24 +61,48 @@ header{
 .logo img{
     padding: 0;
     margin-right: 10px;
+    background-size: cover;
+    border-radius: 50%;
+    margin:0 auto;
+    background-color: #672F2F;
+    transition: all 1s;
+    margin:15px;
+}
+
+.logo:hover{
+    background-color: var(--accent-color);
+    color: var(--primary-color-dark);
 }
 
 /*Para todos los section de clase content*/
 .content{
     box-shadow: 1px 0 4px rgb(0,0,0,.2);
-    background-color: #d7d1c9;
-    border-radius:10px 0 10px 0;
+    /*background-color: #E6DEDD;*/
+    background-color: rgb(215, 209, 201, 0.9);
+    border: radius 80px;
     display:flex;
-    
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    width: 1480px;
+    height: 640px;
 }
 
 .half-section {
     width: 50%;
+    margin:30px;
+    padding: 10px;
   }
+
+/*section{
+    opacity: 0.9;
+}*/
 
 .text-section, h2, p{
     text-align: center;
-    text-size-adjust: 15px;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
 }
 
 ul{
@@ -82,8 +112,8 @@ ul{
 
 
 :root{
-    --acent-color: #d7d1c9;
-    --primary-color-dark:#0e0e0e;
+    --acent-color: #0e0e0e;
+    --primary-color-dark:#d7d1c9;
     --primary-color:#672F2F;
 }
 
@@ -124,3 +154,45 @@ ul{
     display: block;
     transform: scaleX(1);
 }
+
+/*.formulario{
+    background-image: url("/assets/logo/background-form.jpg") !important;
+    height:550px;
+    display: flex;
+    justify-content: space-around;
+    font-size: x-large;
+    align-items: center;
+    width: 1480px;
+    height: 640px;
+    margin: auto;
+}*/
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+/*fond
+o*/
+
+.parallax {
+    /* The image used */
+    background-image: url("/assets/logo/background-page.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="content-"] {
+      width: 100%;
+    }
+}
+  
+
