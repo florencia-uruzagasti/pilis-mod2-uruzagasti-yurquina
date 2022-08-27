@@ -124,34 +124,57 @@
         <aside class="half-section text-section">
           <p>Suscribete al evento para potenciar el comercio local. <br> Luego te contactaremos.</p>
         </aside>
-        <form id="form" method="post">
+        <form id="formulario" method="post">
           <div class="form-group">
             <h4>Formulario de contacto</h4>
-            <label for="name">Comercio: </label>
-            <input id="name" class="form-control" type="text" required/>
+            <label for="name_comercio">Comercio: </label>
+            <input id="name_comercio" class="form-control" type="text" required/>
           </div>
           <div class="form-group">
-            <label for="titular">Titular: </label>
-            <input id="titular" class="form-control" type="text" required/>
+            <label for="name_titular">Titular: </label>
+            <input id="name_titular" class="form-control" type="text" required/>
           </div>
           <div class="form-group">
             <label for="phone" aria-required="true" maxlength="10" >Celular: </label>
             <input
               type="tel"
               name="celular"
-              id="tel"
+              id="phone"
               maxlength="10"
               aria-required="false"
               aria-invalid="false"
             />
           </div>
-          <div class="form-group">
-            <input type="submit" value="Enviar">
-          </div>
-          <!-- CONTROLAR -->
+          <button id="enviar" class="btn btn-light">Enviar</button>
         </form>
       </section>
       <br />
+      <!-- Clima -->
+      <section  id="clima">
+
+      </div>
+  
+      <div class="weather-card" id="card">
+        <div class="city" id="city">San Salvador de Jujuy, Ar</div>
+        <div class="date" id="date">26/08/2022</div>
+        <div class="temperature">
+          <img src="assets/images/temp-mid.png" class="temp-img" id="temp-img" />
+          <div class="temp" id="temp">14°C</div>
+        </div>
+        <div class="weather" id="weather">Sol</div>
+        <div class="range" id="range">12°C / 18°C</div>
+      </div>
+  
+      <div class="share">
+        <a href="https://es-la.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com/?lang=es" target="_blank" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a>
+        <a href="https://ar.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+        <a href="" class="btn-wsp" target="_blank">
+          <i class="fa fa-whatsapp icono"></i>
+        </a>
+        </div>
+    </section>
 
       <!-- Flotante whatsapp -->
       <div
@@ -171,10 +194,6 @@
       <div class="joinchat__button">
         <div class="joinchat__button__open"></div>
       </div>
-      <footer>
-        <!-- Clima del lugar del evento -->
-        <p>Clima en el lugar del evento</p>
-      </footer>
       <br />
       <script src="main.js"></script>
     </div>
