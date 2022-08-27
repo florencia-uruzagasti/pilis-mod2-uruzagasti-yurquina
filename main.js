@@ -39,11 +39,12 @@ boton.addEventListener("click", onClick); //cuando hace click se ejecuta la func
 
 const api = {
   key: '31be94f54be26bd2430df58dae0823b0',
-  url: `https://api.openweathermap.org/data/2.5/weather`
+  url: `https://api.openweathermap.org/data/2.5/weather`,
+  lat: '-24.18221',
+  lon: '-65.330775'
 }
 
 const card = document.getElementById('card')
-
 const city = document.getElementById('city');
 const date = document.getElementById('date');
 const tempImg = document.getElementById('temp-img');
@@ -62,20 +63,21 @@ function updateImages(data) {
   tempImg.src = src;
 }
 
-async function search(query) {
+async function search() {
   try {
-    const response = await fetch(`${api.url}?q=${query}&appid=${api.key}&lang=es`);
+    const response = await fetch(`${api.url}?lat=${api.lat}&lon=${api.lon}&exclude={part}&appid=${api.key}&lang=es`);
     const data = await response.json();
+    console.log(data);
+    drawWeather(data);
     card.style.display = 'block';
     city.innerHTML = `${data.name}, ${data.sys.country}`;
-    data.innerHTML = (new Date()).toLocaleDateString();
-    temp.innerHTML = `${toCelsius(data.main.temp)}c`;
+    date.innerHTML = (new Date()).toLocaleDateString();
+    temp.innerHTML = `${toCelsius(data.main.temp)}°C`;
     weather.innerHTML = data.weather[0].description;
-    range.innerHTML = `${toCelsius(data.main.temp_min)}c / ${toCelsius(data.main.temp_max)}c`;
+    range.innerHTML = `Min: ${toCelsius(data.main.temp_min)}°C / Max: ${toCelsius(data.main.temp_max)}°C`;
     updateImages(data);
   } catch (err) {
     console.log(err);
-    alert('Hubo un error');
   }
 }
 
@@ -83,11 +85,6 @@ function toCelsius(kelvin) {
   return Math.round(kelvin - 273.15);
 }
 
-function onSubmit(event) {
-  event.preventDefault();
-  search(searchbox.value);
+function drawWeather(d) {
+  document.getElementById('icon').src = `http://openweathermap.org/img/w/${d.weather[0].icon}.png`;
 }
-
-const searchform = document.getElementById('search-form');
-const searchbox = document.getElementById('searchbox');
-searchform.addEventListener('submit', onSubmit, true);
